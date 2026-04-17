@@ -496,7 +496,7 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
---- !u!1001 &5241068327505489418
+--- !u!1001 &2048469925
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -504,25 +504,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -714330699361017249, guid: 0187f4a60f3fe5c4391546d805c71f80, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1369241973207478139, guid: 0187f4a60f3fe5c4391546d805c71f80, type: 3}
       propertyPath: m_Name
-      value: Player-Untextured
+      value: Player-Untextured (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 2696352257650125367, guid: 0187f4a60f3fe5c4391546d805c71f80, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 1479354609}
     - target: {fileID: 6349391075443066685, guid: 0187f4a60f3fe5c4391546d805c71f80, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -5.56
       objectReference: {fileID: 0}
     - target: {fileID: 6349391075443066685, guid: 0187f4a60f3fe5c4391546d805c71f80, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0.99
       objectReference: {fileID: 0}
     - target: {fileID: 6349391075443066685, guid: 0187f4a60f3fe5c4391546d805c71f80, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.44
+      value: 1.2432493
       objectReference: {fileID: 0}
     - target: {fileID: 6349391075443066685, guid: 0187f4a60f3fe5c4391546d805c71f80, type: 3}
       propertyPath: m_LocalRotation.w
@@ -564,4 +564,4 @@ SceneRoots:
   - {fileID: 1859436464}
   - {fileID: 354644261}
   - {fileID: 1479354610}
-  - {fileID: 5241068327505489418}
+  - {fileID: 2048469925}
