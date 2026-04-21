@@ -11,6 +11,10 @@ public class PlayerController : MonoBehaviour
     public float speed = 0; // speed of player
     public int winScore = 1; // number of collectibles required to win
 
+    public Rigidbody RB {
+        get { return rb; }
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
