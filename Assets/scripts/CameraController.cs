@@ -4,13 +4,13 @@ using System;
 public class CameraController : MonoBehaviour
 {
     public GameObject player;
+    public float distance;
 
     private Vector3 offset;
     private Vector3 pVelocity;
     private float direction;
-    private float distance;
 
-    private const float PI = F1415926535897931;
+    private const double PI = 3.1415926535897931f;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,21 +25,18 @@ public class CameraController : MonoBehaviour
         // get player velocity
         pVelocity = player.GetComponent<PlayerController>().RB.linearVelocity;
 
-        // ensure a reasonable amount of velocity is occuring before changing direction
-        if ( ( Math.Abs(pVelocity.x) >= 3 ) || ( Math.Abs(pVelocity.z) >= 3 ) )
-        {
-            // get direction of player velocity
-            direction = Math.Atan(-pVelocity.z / -pVelocity.x);
+        // get direction of player
+        direction = player.GetComponent<PlayerController>().Direction;
 
-            // use direction and distance to find new camera location
-            offset = new Vector3 (
-                Convert.ToSingle( Math.Cos(direction) * distance ), 
-                offset.y, 
-                Convert.ToSingle( Math.Sin(direction) * distance )
-            );
-        }
+        // use direction and distance to find new camera location
+        offset = new Quaternion ( 0, 1f, 0, direction) * new Vector3 (
+            distance, 
+            offset.y, 
+            distance
+        );
 
-        transform.rotation = new Vector3 (0, -direction * ( 180 / PI), 0);
+        transform.forward = player.transform.position - transform.position;
+
 
         transform.position = player.transform.position + offset;
     }
