@@ -29,14 +29,13 @@ public class CameraController : MonoBehaviour
         direction = player.GetComponent<PlayerController>().Direction;
 
         // use direction and distance to find new camera location
-        offset = new Quaternion ( 0, 1f, 0, direction) * new Vector3 (
-            distance, 
+        offset = new Vector3 (
+            Convert.ToSingle( distance * Math.Sin(direction) ),
             offset.y, 
-            distance
+            Convert.ToSingle( distance * Math.Cos(direction) )
         );
 
         transform.forward = player.transform.position - transform.position;
-
 
         transform.position = player.transform.position + offset;
     }

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System;
 
 
 public class PlayerController : MonoBehaviour
@@ -9,9 +10,11 @@ public class PlayerController : MonoBehaviour
     private float movementY; // movement along Y axis
 
     public float speed = 0; // speed of player
-    public int winScore = 1; // number of collectibles required to win
+    public rotationSpeed = 1;
+
 
     private float direction = 0;
+    private float rotation;
 
     private const float PI = 3.14159f;
 
@@ -36,12 +39,17 @@ public class PlayerController : MonoBehaviour
         //movementX = movementVector.x;
         movementY = movementVector.y;
 
-        direction += movementVector.x/40;
+        rotation = movementVector.x/rotationSpeed;
     }
 
     void FixedUpdate()
     {
-        Vector3 movement = new Quaternion(0, 1f, 0, direction) * new Vector3 (movementX, 0.0f, movementY);
+        Vector3 movement = new Vector3 (
+            Convert.ToSingle( movementY * Math.Sin(direction) ), 
+            0.0f, 
+            Convert.ToSingle( movementY * Math.Cos(direction) )
+        );
         rb.AddForce(movement * speed);
+        direction += rotation;
     }
 }
