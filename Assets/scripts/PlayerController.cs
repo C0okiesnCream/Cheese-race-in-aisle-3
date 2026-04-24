@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     private float movementY; // movement along Y axis
 
     public float speed = 0; // speed of player
-    public rotationSpeed = 1;
+    public float rotationSpeed = 1;
 
 
     private float direction = 0;
