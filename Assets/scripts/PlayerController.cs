@@ -11,10 +11,11 @@ public class PlayerController : MonoBehaviour
 
     public float speed = 0; // speed of player
     public float rotationSpeed = 1;
-
+    public float rotationAccel = 1;
 
     private float direction = 0;
     private float rotation;
+    private float rotationInertia;
 
     private const float PI = 3.14159f;
 
@@ -36,7 +37,7 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 movementVector = movementVal.Get<Vector2>();
 
-        //movementX = movementVector.x;
+        movementX = movementVector.x;
         movementY = movementVector.y;
 
         rotation = movementVector.x/rotationSpeed;
@@ -45,11 +46,15 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 movement = new Vector3 (
-            Convert.ToSingle( movementY * Math.Sin(direction) ), 
+            Convert.ToSingle( movementY * Math.Sin(direction) + movementX * Math.Cos(direction)), 
             0.0f, 
-            Convert.ToSingle( movementY * Math.Cos(direction) )
+            Convert.ToSingle( movementY * Math.Cos(direction) + movementX * Math.Sin(direction))
         );
         rb.AddForce(movement * speed);
-        direction += rotation;
+
+        rotationInertia += rotation;
+        direction += rotationInertia;
+
+        rotationInertia = rotationInertia/rotationAccel;
     }
 }
