@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System;
 
 
 public class PlayerController : MonoBehaviour
@@ -9,7 +10,22 @@ public class PlayerController : MonoBehaviour
     private float movementY; // movement along Y axis
 
     public float speed = 0; // speed of player
-    public int winScore = 1; // number of collectibles required to win
+    public float rotationSpeed = 1;
+    public float rotationAccel = 1;
+
+    private float direction = 0;
+    private float rotation;
+    private float rotationInertia;
+
+    private const float PI = 3.14159f;
+
+    public Rigidbody RB {
+        get { return rb; }
+    }
+
+    public float Direction {
+        get { return direction; }
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,11 +39,22 @@ public class PlayerController : MonoBehaviour
 
         movementX = movementVector.x;
         movementY = movementVector.y;
+
+        rotation = movementVector.x/rotationSpeed;
     }
 
     void FixedUpdate()
     {
-        Vector3 movement = new Vector3 (movementX, 0.0f, movementY);
+        Vector3 movement = new Vector3 (
+            Convert.ToSingle( movementY * Math.Sin(direction) + movementX * Math.Cos(direction)), 
+            0.0f, 
+            Convert.ToSingle( movementY * Math.Cos(direction) + movementX * Math.Sin(direction))
+        );
         rb.AddForce(movement * speed);
+
+        rotationInertia += rotation;
+        direction += rotationInertia;
+
+        rotationInertia = rotationInertia/rotationAccel;
     }
 }
