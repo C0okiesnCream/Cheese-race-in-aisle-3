@@ -51,6 +51,8 @@ public class CameraController : MonoBehaviour
         transform.forward = player.transform.position - transform.position;
 
         if ()
-        transform.position = player.transform.position + offset;
+        {
+            transform.position = player.transform.position + offset;
+        }
     }
 }
