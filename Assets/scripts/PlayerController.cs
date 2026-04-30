@@ -12,8 +12,8 @@ public class PlayerController : MonoBehaviour
     public float speed = 0; // speed of player
     public float rotationSpeed = 1;
     public float rotationAccel = 1;
+    public GameObject camera;
 
-    private float direction = 0;
     private float rotation;
     private float rotationInertia;
 
@@ -23,9 +23,6 @@ public class PlayerController : MonoBehaviour
         get { return rb; }
     }
 
-    public float Direction {
-        get { return direction; }
-    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -39,8 +36,6 @@ public class PlayerController : MonoBehaviour
 
         movementX = movementVector.x;
         movementY = movementVector.y;
-
-        rotation = movementVector.x/rotationSpeed;
     }
 
     void FixedUpdate()
