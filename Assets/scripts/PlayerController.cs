@@ -16,13 +16,13 @@ public class PlayerController : MonoBehaviour
 
     private float rotation;
     private float rotationInertia;
+    private float direction;
 
     private const float PI = 3.14159f;
 
     public Rigidbody RB {
         get { return rb; }
     }
-
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -40,6 +40,9 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        // get direction camera is facing
+        direction = camera.GetComponent<CameraController>().Direction;
+
         Vector3 movement = new Vector3 (
             Convert.ToSingle( movementY * Math.Sin(direction) + movementX * Math.Cos(direction)), 
             0.0f, 

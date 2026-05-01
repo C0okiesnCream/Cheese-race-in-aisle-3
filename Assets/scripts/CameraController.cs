@@ -27,19 +27,19 @@ public class CameraController : MonoBehaviour
     void LateUpdate()
     {
         // get player velocity
-        pVelocity = player.GetComponent<PlayerController>().RB.linearVelocity;
+        // pVelocity = player.GetComponent<PlayerController>().RB.linearVelocity;
 
         // get distance from player
         currentDistance = new Vector2 (
-            player.transform.x - transform.x,
-            player.transform.z - transform.z
+            player.transform.position.x - transform.position.x,
+            player.transform.position.z - transform.position.z
         );
 
         // find direction in radians through (playerZ - cameraZ) / (playerX - cameraX)
-        direction = Math.Atan(
+        direction = Convert.ToSingle(Math.Atan(
             (currentDistance.y) /
             (currentDistance.x)
-        );
+        ));
 
         // use direction and targetDistance to find new camera location
         offset = new Vector3 (
@@ -50,9 +50,9 @@ public class CameraController : MonoBehaviour
 
         transform.forward = player.transform.position - transform.position;
 
-        if ()
+        if (Math.Sqrt(currentDistance.y * currentDistance.y + currentDistance.x * currentDistance.x) > targetDistance)
         {
-            transform.position = player.transform.position + offset;
+            transform.position = player.transform.position + 0.5 * offset;
         }
     }
 }
