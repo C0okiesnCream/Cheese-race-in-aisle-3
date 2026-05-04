@@ -37,7 +37,6 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 movementVector = movementVal.Get<Vector2>();
 
-        movementX = movementVector.x;
         movementY = movementVector.y;
 
         rotation = movementVector.x/rotationSpeed;
@@ -46,9 +45,9 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 movement = new Vector3 (
-            Convert.ToSingle( movementY * Math.Sin(direction) + movementX * Math.Cos(direction)), 
+            Convert.ToSingle( movementY * Math.Sin(direction)), 
             0.0f, 
-            Convert.ToSingle( movementY * Math.Cos(direction) + movementX * Math.Sin(direction))
+            Convert.ToSingle( movementY * Math.Cos(direction))
         );
         rb.AddForce(movement * speed);
 
