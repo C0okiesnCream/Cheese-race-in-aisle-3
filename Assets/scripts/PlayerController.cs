@@ -32,12 +32,12 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent <Rigidbody>();
-        distToGround = collider.bounds.extents.y;
+        distToGround = GetComponent<Collider>().bounds.extents.y;
     }
 
     bool IsGrounded() 
     {
-        return Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.1);
+        return Physics.Raycast(transform.position, -Vector3.up, (float)(distToGround + 0.1));
     }
 
     void OnMove (InputValue movementVal)
