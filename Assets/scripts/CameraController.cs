@@ -37,6 +37,6 @@ public class CameraController : MonoBehaviour
 
         transform.forward = player.transform.position - transform.position;
 
-        transform.position = player.transform.position + offset;
+        transform.position = Vector3.Lerp(transform.position, player.transform.position + offset, 0.05f);
     }
 }
