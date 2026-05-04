@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     private float direction = 0;
     private float rotation;
     private float rotationInertia;
+    private float distToGround;
 
     private const float PI = 3.14159f;
 
@@ -31,6 +32,12 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent <Rigidbody>();
+        distToGround = collider.bounds.extents.y;
+    }
+
+    bool IsGrounded() 
+    {
+        return Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.1);
     }
 
     void OnMove (InputValue movementVal)
