@@ -11,7 +11,7 @@ public class CameraController : MonoBehaviour
     private float direction;
 
     private const double PI = 3.1415926535897931f;
-    
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

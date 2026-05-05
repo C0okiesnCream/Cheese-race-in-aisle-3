@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 0; // speed of player
     public float rotationSpeed = 1;
     public float rotationAccel = 1;
+    public float airSpeedMult = 0.2;
 
     private float direction = 0;
     private float rotation;
@@ -28,16 +29,16 @@ public class PlayerController : MonoBehaviour
         get { return direction; }
     }
 
+    bool IsGrounded() 
+    {
+        return Physics.Raycast(transform.position, -Vector3.up, (float)(distToGround + 0.1));
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent <Rigidbody>();
         distToGround = GetComponent<Collider>().bounds.extents.y;
-    }
-
-    bool IsGrounded() 
-    {
-        return Physics.Raycast(transform.position, -Vector3.up, (float)(distToGround + 0.1));
     }
 
     void OnMove (InputValue movementVal)
@@ -56,7 +57,15 @@ public class PlayerController : MonoBehaviour
             0.0f, 
             Convert.ToSingle( movementY * Math.Cos(direction))
         );
-        rb.AddForce(movement * speed);
+
+        if (IsGrounded())
+        {
+            rb.AddForce(movement * speed);
+        }
+        else
+        {
+            rb.AddForce(movement * speed * airSpeedMult);
+        }
 
         rotationInertia += rotation;
         direction += rotationInertia;
