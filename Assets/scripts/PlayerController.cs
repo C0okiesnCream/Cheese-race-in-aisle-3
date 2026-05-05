@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
         get { return direction; }
     }
 
+    // Checks if the player is on the ground and returns a boolean based on the result
     bool IsGrounded() 
     {
         return Physics.Raycast(transform.position, -Vector3.up, (float)(distToGround + 0.1));
