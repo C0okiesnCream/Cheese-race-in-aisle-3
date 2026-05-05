@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 0; // speed of player
     public float rotationSpeed = 1;
     public float rotationAccel = 1;
-    public float airSpeedMult = 0.2;
+    public float airSpeedMult = 0.2f;
 
     private float direction = 0;
     private float rotation;
