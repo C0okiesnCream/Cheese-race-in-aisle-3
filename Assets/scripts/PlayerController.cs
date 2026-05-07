@@ -10,16 +10,16 @@ public class PlayerController : MonoBehaviour
     private float movementY; // movement along Y axis
 
     public float speed = 0; // speed of player
-    public float rotationSpeed = 1;
-    public float rotationAccel = 1;
-    public float airSpeedMult = 0.2f;
+    public float rotationSpeed = 40; // movement vector is divided by this number to get rotation
+    public float rotationAccel = 2; // inertia is divided by this each frame to smooth out the end of rotation
+    public float airSpeedMult = 0.2f; // speed multiplier while in air
 
-    private float direction = 0;
-    private float rotation;
-    private float rotationInertia;
-    private float distToGround;
+    private float direction = 0; // direction the camera is facing
+    private float rotation; // the value to be added to inertia to change it
+    private float rotationInertia; // added directly to direction
+    private float distToGround; // distance from middle of the model to the ground, used to ensure the vector that detects the player is grounded is just outside of the model
 
-    private const float PI = 3.14159f;
+    public ParticleSystem impactParticles;
 
     public Rigidbody RB {
         get { return rb; }
@@ -33,6 +33,11 @@ public class PlayerController : MonoBehaviour
     bool IsGrounded() 
     {
         return Physics.Raycast(transform.position, -Vector3.up, (float)(distToGround + 0.1));
+    }
+
+    void OnCollisionEnter()
+    {
+        impactParticles.Play();
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
