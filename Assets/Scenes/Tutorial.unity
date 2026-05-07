@@ -2011,6 +2011,10 @@ PrefabInstance:
       value: Player-Untextured
       objectReference: {fileID: 0}
     - target: {fileID: 1457849391984004526, guid: 0187f4a60f3fe5c4391546d805c71f80, type: 3}
+      propertyPath: airSpeedMult
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1457849391984004526, guid: 0187f4a60f3fe5c4391546d805c71f80, type: 3}
       propertyPath: rotationAccel
       value: 2
       objectReference: {fileID: 0}
