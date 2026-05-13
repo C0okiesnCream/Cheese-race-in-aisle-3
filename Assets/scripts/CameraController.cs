@@ -16,7 +16,6 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         offset = transform.position - player.transform.position;
-        distance = offset.z;
     }
 
     // Update is called once per frame
@@ -30,9 +29,9 @@ public class CameraController : MonoBehaviour
 
         // use direction and distance to find new camera location
         offset = new Vector3 (
-            Convert.ToSingle( distance * Math.Sin(direction) ),
+            Convert.ToSingle( -distance * Math.Sin(direction) ),
             offset.y, 
-            Convert.ToSingle( distance * Math.Cos(direction) )
+            Convert.ToSingle( -distance * Math.Cos(direction) )
         );
 
         transform.forward = player.transform.position - transform.position;
