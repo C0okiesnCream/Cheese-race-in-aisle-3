@@ -5,9 +5,18 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Cubey_scene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/UI.unity
+    guid: 56b257f5b99e2a544bbd1b4c633259d5
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 123c53bb7a927564fa783bc810b88608
+  - enabled: 1
+    path: Assets/Scenes/Track1.unity
+    guid: 952f45d8feac81244b242320d2d12e43
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
