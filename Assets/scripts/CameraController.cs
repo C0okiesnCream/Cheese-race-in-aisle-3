@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using Random = System.Random;
 
 public class CameraController : MonoBehaviour
 {
@@ -36,6 +37,6 @@ public class CameraController : MonoBehaviour
 
         transform.forward = player.transform.position - transform.position;
 
-        transform.position = Vector3.Lerp(transform.position, player.transform.position + offset, 0.05f);
+
     }
 }

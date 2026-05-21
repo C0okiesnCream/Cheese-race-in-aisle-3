@@ -206,6 +206,39 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &471348897
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 471348898}
+  m_Layer: 0
+  m_Name: ThwompFridgeContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &471348898
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471348897}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.62024, y: 0, z: -15.7953}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1291864087}
+  - {fileID: 1274822083}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &626663479
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -408,6 +441,64 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1274822082
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1274822083}
+  - component: {fileID: 1274822084}
+  m_Layer: 0
+  m_Name: Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1274822083
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274822082}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.66, y: 0.54, z: 0.32}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 471348898}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1274822084
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274822082}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5, y: 1, z: 3}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1291864087 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3565025517039841905, guid: 52ced4fb5082eaa4097cfeb7a4147e67, type: 3}
+  m_PrefabInstance: {fileID: 882452039061810556}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1528244781
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,11 +769,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 471348898}
     m_Modifications:
     - target: {fileID: 3565025517039841905, guid: 52ced4fb5082eaa4097cfeb7a4147e67, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.8074255
+      value: -0.8128147
       objectReference: {fileID: 0}
     - target: {fileID: 3565025517039841905, guid: 52ced4fb5082eaa4097cfeb7a4147e67, type: 3}
       propertyPath: m_LocalPosition.y
@@ -690,7 +781,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3565025517039841905, guid: 52ced4fb5082eaa4097cfeb7a4147e67, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -16.691738
+      value: -0.8964386
       objectReference: {fileID: 0}
     - target: {fileID: 3565025517039841905, guid: 52ced4fb5082eaa4097cfeb7a4147e67, type: 3}
       propertyPath: m_LocalRotation.w
@@ -854,4 +945,4 @@ SceneRoots:
   - {fileID: 20321578}
   - {fileID: 626663479}
   - {fileID: 3405756435594110075}
-  - {fileID: 882452039061810556}
+  - {fileID: 471348898}
