@@ -773,7 +773,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3565025517039841905, guid: 52ced4fb5082eaa4097cfeb7a4147e67, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.8128147
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3565025517039841905, guid: 52ced4fb5082eaa4097cfeb7a4147e67, type: 3}
       propertyPath: m_LocalPosition.y
@@ -781,7 +781,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3565025517039841905, guid: 52ced4fb5082eaa4097cfeb7a4147e67, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.8964386
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3565025517039841905, guid: 52ced4fb5082eaa4097cfeb7a4147e67, type: 3}
       propertyPath: m_LocalRotation.w
@@ -811,6 +811,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3885401601962050401, guid: 52ced4fb5082eaa4097cfeb7a4147e67, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 416fc836e332aed4abb735463c6d8e40, type: 2}
     - target: {fileID: 4193506000930384075, guid: 52ced4fb5082eaa4097cfeb7a4147e67, type: 3}
       propertyPath: m_Name
       value: ThwompFridge
