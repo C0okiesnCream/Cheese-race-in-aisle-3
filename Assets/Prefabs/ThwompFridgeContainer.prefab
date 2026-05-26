@@ -1,0 +1,173 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4614098084837911701
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5802437308235976168}
+  - component: {fileID: 4063105820152019178}
+  - component: {fileID: 3869038780149875542}
+  m_Layer: 0
+  m_Name: Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5802437308235976168
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4614098084837911701}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.11, y: 0.54, z: 1.04}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2311596653893204644}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4063105820152019178
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4614098084837911701}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5, y: 1, z: 3}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3869038780149875542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4614098084837911701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57654e4ada5f5b048bc21dae49ef770b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerDetection
+  anim: {fileID: 1498103142745157554}
+--- !u!1 &6599926104521301586
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2311596653893204644}
+  m_Layer: 0
+  m_Name: ThwompFridgeContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2311596653893204644
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6599926104521301586}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.62024, y: 0, z: -15.7953}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1177813506939608738}
+  - {fileID: 5802437308235976168}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2387449815208701139
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2311596653893204644}
+    m_Modifications:
+    - target: {fileID: 3565025517039841905, guid: 52ced4fb5082eaa4097cfeb7a4147e67, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3565025517039841905, guid: 52ced4fb5082eaa4097cfeb7a4147e67, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 3565025517039841905, guid: 52ced4fb5082eaa4097cfeb7a4147e67, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3565025517039841905, guid: 52ced4fb5082eaa4097cfeb7a4147e67, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.69183606
+      objectReference: {fileID: 0}
+    - target: {fileID: 3565025517039841905, guid: 52ced4fb5082eaa4097cfeb7a4147e67, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.72205466
+      objectReference: {fileID: 0}
+    - target: {fileID: 3565025517039841905, guid: 52ced4fb5082eaa4097cfeb7a4147e67, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3565025517039841905, guid: 52ced4fb5082eaa4097cfeb7a4147e67, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3565025517039841905, guid: 52ced4fb5082eaa4097cfeb7a4147e67, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 92.449005
+      objectReference: {fileID: 0}
+    - target: {fileID: 3565025517039841905, guid: 52ced4fb5082eaa4097cfeb7a4147e67, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3565025517039841905, guid: 52ced4fb5082eaa4097cfeb7a4147e67, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3885401601962050401, guid: 52ced4fb5082eaa4097cfeb7a4147e67, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 416fc836e332aed4abb735463c6d8e40, type: 2}
+    - target: {fileID: 4193506000930384075, guid: 52ced4fb5082eaa4097cfeb7a4147e67, type: 3}
+      propertyPath: m_Name
+      value: ThwompFridge
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 52ced4fb5082eaa4097cfeb7a4147e67, type: 3}
+--- !u!4 &1177813506939608738 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3565025517039841905, guid: 52ced4fb5082eaa4097cfeb7a4147e67, type: 3}
+  m_PrefabInstance: {fileID: 2387449815208701139}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1498103142745157554 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3885401601962050401, guid: 52ced4fb5082eaa4097cfeb7a4147e67, type: 3}
+  m_PrefabInstance: {fileID: 2387449815208701139}
+  m_PrefabAsset: {fileID: 0}
